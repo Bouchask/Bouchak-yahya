@@ -1,0 +1,33 @@
+
+{
+  "skillCategories": [
+    {
+      "title": "Langages de Programmation",
+      "skills": ["C", "Java", "Python", "JavaScript", "PHP"]
+    },
+    {
+      "title": "Frameworks & Bibliothèques",
+      "skills": ["React", "Node.js", "Laravel"]
+    },
+    {
+      "title": "Développement Web",
+      "skills": ["HTML", "CSS", "JavaScript", "Front-end", "Back-end"]
+    },
+    {
+      "title": "Bases de Données",
+      "skills": ["SQL", "T-SQL", "MySQL", "PostgreSQL", "NoSQL"]
+    },
+    {
+      "title": "Technologies",
+      "skills": ["Big Data", "Machine Learning", "Deep Learning"]
+    },
+    {
+      "title": "Design & Modélisation",
+      "skills": ["UML", "Merise"]
+    },
+    {
+      "title": "Langues",
+      "skills": ["Français (niveau moyen)", "Anglais (niveau moyen)"]
+    }
+  ]
+}
