@@ -18,6 +18,12 @@
       "description": "Jeu 3D intégrant un module de reinforcement learning pour l'intelligence artificielle.",
       "technologies": ["Three.js", "React", "Reinforcement Learning"],
       "githubUrl": "https://github.com/Bouchask/edu-course-network"
-    }
+    },
+    {
+      "title": "Détection et Clustering de Visages",
+      "description": "Application intelligente de traitement vidéo utilisant Streamlit, InsightFace et Mediapipe pour détecter, compter, et regrouper les visages similaires dans une vidéo.",
+      "technologies": ["Python", "Streamlit", "InsightFace", "HDBSCAN", "MediaPipe", "OpenCV"],
+      "githubUrl": "https://github.com/Bouchask/D-tection-et-de-Clustering-des-Visages"
+    }    
   ]
 }
