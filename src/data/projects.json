@@ -3,7 +3,7 @@
   "projects": [
     {
       "title": "Gestion des Événements",
-      "description": "Application de gestion d'événements utilisant le pattern MVC pour une meilleure organisation du code.",
+      "description": "Application de FILL IN gestion d'événements utilisant le pattern MVC pour une meilleure organisation du code.",
       "technologies": ["MVC", "PHP", "MySQL"],
       "githubUrl": "https://github.com/Bouchask/gestion-evenement"
     },
@@ -24,6 +24,12 @@
       "description": "Application intelligente de traitement vidéo utilisant Streamlit, InsightFace et Mediapipe pour détecter, compter, et regrouper les visages similaires dans une vidéo.",
       "technologies": ["Python", "Streamlit", "InsightFace", "HDBSCAN", "MediaPipe", "OpenCV"],
       "githubUrl": "https://github.com/Bouchask/D-tection-et-de-Clustering-des-Visages"
-    }    
+    },
+    {
+      "title": "NLP Sentiment Analysis",
+      "description": "Application Streamlit pour analyser les sentiments des commentaires YouTube (en anglais) sur des séries populaires comme Game of Thrones, La Casa de Papel, et Stranger Things, avec visualisations interactives.",
+      "technologies": ["Python", "Streamlit", "YouTube Data API v3", "DistilRoBERTa", "Plotly", "WordCloud", "Langdetect", "Pandas", "Google API Client", "Dotenv", "Matplotlib"],
+      "githubUrl": "https://github.com/Bouchask/nlp_sentiment_project"
+    }
   ]
 }
