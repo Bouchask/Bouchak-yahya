@@ -7,12 +7,6 @@
       "githubUrl": "https://github.com/Bouchask/gestion-evenement"
     },
     {
-      "title": "Edu Course Network",
-      "description": "Plateforme d'apprentissage en ligne inspirée de Coursera, développée avec React et une base de données en ligne.",
-      "technologies": ["React", "SupDatabase", "Node.js"],
-      "githubUrl": "https://github.com/Bouchask/edu-course-network"
-    },
-    {
       "title": "3D Game with AI",
       "description": "Jeu 3D intégrant un module de reinforcement learning pour l'intelligence artificielle.",
       "technologies": ["Three.js", "React", "Reinforcement Learning"],
