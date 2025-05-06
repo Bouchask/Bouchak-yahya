@@ -35,6 +35,12 @@
       "description": "A Streamlit-based application for real-time finger counting and emotion detection using a webcam, leveraging MediaPipe for hand tracking and DeepFace for emotion recognition.",
       "technologies": ["Python", "Streamlit", "MediaPipe", "DeepFace", "OpenCV", "NumPy"],
       "githubUrl": "https://github.com/Bouchask/detection_face"
+    },
+    {
+      "title": "Trading Prediction System for NASDAQ 100",
+      "description": "Système de prédiction de trading pour l'indice NASDAQ 100 utilisant un modèle hybride CNN-LSTM-GRU, avec une interface utilisateur Streamlit pour des prédictions en temps réel.",
+      "technologies": ["Python", "Streamlit", "TensorFlow", "yfinance", "Pandas", "NumPy", "Scikit-learn", "Joblib"],
+      "githubUrl": "https://github.com/Bouchask/prediction_nasdaq"
     }
   ]
 }
