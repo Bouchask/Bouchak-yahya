@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import skillsData from '../data/skills.json';
+import { useLanguage } from '@/lib/LanguageContext';
 
 const SkillCategory = ({ title, skills }: { title: string; skills: string[] }) => (
   <motion.div
@@ -26,6 +27,8 @@ const SkillCategory = ({ title, skills }: { title: string; skills: string[] }) =
 );
 
 const Skills = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.section
       id="skills"
@@ -41,7 +44,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Skills
+          {t('skills.title')}
         </motion.h2>
         <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"></div>
       </div>

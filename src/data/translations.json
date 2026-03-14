@@ -1,0 +1,108 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "hero": {
+      "welcome": "👋 Welcome to my portfolio",
+      "subtitle": "Master Excellence Student in SIIA at FP Khouribga",
+      "description": "Passionate about computer science and technological innovation, I am constantly seeking learning and stimulating challenges. Specialized in AI and Full-stack development.",
+      "contactBtn": "Contact me",
+      "projectsBtn": "View my projects",
+      "downloadCV": "Download CV"
+    },
+    "about": {
+      "title": "About Me",
+      "journey": "My Journey",
+      "p1": "I am Yahya Bouchak, a computer science student at FP Khouribga, pursuing a Master's Excellence degree in Intelligent Systems and Artificial Intelligence (SIIA). My academic background reflects my commitment to excellence.",
+      "p2": "Passionate about solving complex problems and creating innovative solutions, I combine my technical skills in Full-stack development with my deep knowledge of AI to build high-impact projects.",
+      "education": "Education",
+      "master": "Master Excellence in SIIA - FP Khouribga",
+      "bachelor": "Bachelor's Excellence in SIIA - FP Khouribga",
+      "bts": "BTS in DSI",
+      "inProgress": "In Progress",
+      "gradLastYear": "Graduated Last Year",
+      "gradHonors": "Graduated with 'Very Good' Honors",
+      "softSkills": "Soft Skills"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "projects": {
+      "title": "Projects",
+      "learnMore": "Learn more"
+    },
+    "experience": {
+      "title": "Experience",
+      "mission": "Mission Description",
+      "keyPoints": "Key Points"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email Me",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "workTogether": "Let's work together!",
+      "description": "I am currently looking for new opportunities and stimulating projects. Feel free to contact me!",
+      "sendBtn": "Send a message"
+    }
+  },
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "experience": "Expérience",
+      "contact": "Contact"
+    },
+    "hero": {
+      "welcome": "👋 Bienvenue sur mon portfolio",
+      "subtitle": "Étudiant en Master Excellence SIIA à la FP Khouribga",
+      "description": "Passionné par l'informatique et l'innovation technologique, je suis en quête constante d'apprentissage et de défis stimulants. Spécialisé en IA et développement Full-stack.",
+      "contactBtn": "Me contacter",
+      "projectsBtn": "Voir mes projets",
+      "downloadCV": "Télécharger CV"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "journey": "Mon Parcours",
+      "p1": "Je suis Yahya Bouchak, étudiant en informatique à la FP Khouribga, poursuivant un Master Excellence en Systèmes Intelligents et Intelligence Artificielle (SIIA). Mon parcours académique témoigne de mon engagement envers l'excellence.",
+      "p2": "Passionné par la résolution de problèmes complexes et la création de solutions innovantes, je combine mes compétences techniques en développement Full-stack avec mes connaissances approfondies en IA pour construire des projets à fort impact.",
+      "education": "Formation",
+      "master": "Master Excellence en SIIA - FP Khouribga",
+      "bachelor": "Licence d'Excellence en SIIA - FP Khouribga",
+      "bts": "BTS en DSI",
+      "inProgress": "En cours",
+      "gradLastYear": "Diplômé l'année dernière",
+      "gradHonors": "Mention 'Très Bien'",
+      "softSkills": "Soft Skills"
+    },
+    "skills": {
+      "title": "Compétences"
+    },
+    "projects": {
+      "title": "Projets",
+      "learnMore": "En savoir plus"
+    },
+    "experience": {
+      "title": "Expérience",
+      "mission": "Description de la mission",
+      "keyPoints": "Points clés"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "M'envoyer un email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "workTogether": "Travaillons ensemble !",
+      "description": "Je suis actuellement à la recherche de nouvelles opportunités et de projets stimulants. N'hésitez pas à me contacter !",
+      "sendBtn": "Envoyer un message"
+    }
+  }
+}

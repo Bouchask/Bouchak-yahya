@@ -1,12 +1,15 @@
 import internshipData from '../data/internship.json';
 import { motion } from 'framer-motion';
 import { Briefcase, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 const Internship = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="internship" className="py-16">
       <div className="flex flex-col items-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">{t('experience.title')}</h2>
         <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"></div>
       </div>
 
@@ -40,14 +43,14 @@ const Internship = () => {
 
         <div className="grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white">Mission Description</h4>
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white">{t('experience.mission')}</h4>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
               {internshipData.description}
             </p>
           </div>
           
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white">Key Points</h4>
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white">{t('experience.keyPoints')}</h4>
             <ul className="space-y-3">
               {internshipData.learnings.map((learning, index) => (
                 <motion.li 

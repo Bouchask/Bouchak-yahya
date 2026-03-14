@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/LanguageContext';
 
 const ContactLink = ({ href, icon: Icon, label }: { href: string; icon: any; label: string }) => (
   <motion.a
@@ -21,28 +22,30 @@ const ContactLink = ({ href, icon: Icon, label }: { href: string; icon: any; lab
 );
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   const contactLinks = [
     {
       href: "mailto:mr.bouchakyahya@gmail.com",
       icon: Mail,
-      label: "Email Me",
+      label: t('contact.email'),
     },
     {
       href: "https://www.linkedin.com/in/yahyabouchak",
       icon: Linkedin,
-      label: "LinkedIn",
+      label: t('contact.linkedin'),
     },
     {
       href: "https://github.com/Bouchask",
       icon: Github,
-      label: "GitHub",
+      label: t('contact.github'),
     },
   ];
 
   return (
     <section id="contact" className="py-16">
       <div className="flex flex-col items-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Contact</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">{t('contact.title')}</h2>
         <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"></div>
       </div>
       
@@ -61,15 +64,15 @@ const Contact = () => {
           viewport={{ once: true }}
           className="mt-12 glass p-8 rounded-3xl text-center space-y-6"
         >
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Let's work together!</h3>
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{t('contact.workTogether')}</h3>
           <p className="text-slate-600 dark:text-slate-400 max-w-lg mx-auto leading-relaxed">
-            I am currently looking for new opportunities and stimulating projects. Feel free to contact me!
+            {t('contact.description')}
           </p>
           <a
             href="mailto:mr.bouchakyahya@gmail.com"
             className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
           >
-            <span>Send a message</span>
+            <span>{t('contact.sendBtn')}</span>
             <Send size={20} />
           </a>
         </motion.div>

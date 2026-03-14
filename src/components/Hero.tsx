@@ -1,8 +1,12 @@
-
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 const Hero = () => {
+  const { language, t } = useLanguage();
+
+  const cvPath = language === 'en' ? '/src/data/cv_ang.pdf' : '/src/data/cv_fr.pdf';
+
   return (
     <section id="hero" className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
@@ -24,7 +28,7 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium border border-purple-200 dark:border-purple-800"
             >
-              👋 Welcome to my portfolio
+              {t('hero.welcome')}
             </motion.div>
             <motion.h1 
               className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white"
@@ -40,7 +44,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Master Excellence Student in SIIA at FP Khouribga
+              {t('hero.subtitle')}
             </motion.h2>
           </div>
           
@@ -50,7 +54,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            Passionate about computer science and technological innovation, I am constantly seeking learning and stimulating challenges. Specialized in AI and Full-stack development.
+            {t('hero.description')}
           </motion.p>
           
           <motion.div 
@@ -65,16 +69,18 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>Contact me</span>
+              <span>{t('hero.contactBtn')}</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </motion.a>
             <motion.a
-              href="#projects"
+              href={cvPath}
+              download
               className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-4 rounded-full font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>View my projects</span>
+              <FileText size={20} />
+              <span>{t('hero.downloadCV')}</span>
             </motion.a>
           </motion.div>
         </motion.div>
