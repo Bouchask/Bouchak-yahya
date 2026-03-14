@@ -5,7 +5,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 const Hero = () => {
   const { language, t } = useLanguage();
 
-  const cvPath = language === 'en' ? '/src/data/cv_ang.pdf' : '/src/data/cv_fr.pdf';
+  const cvPath = language === 'en' ? '/cv/cv_ang.pdf' : '/cv/cv_fr.pdf';
 
   return (
     <section id="hero" className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
