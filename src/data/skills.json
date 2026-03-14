@@ -1,29 +1,28 @@
-
 {
   "skillCategories": [
     {
       "title": "Langages de Programmation",
-      "skills": ["C", "Java", "Python", "JavaScript", "PHP"]
-    },
-    {
-      "title": "Frameworks & Bibliothèques",
-      "skills": ["React", "Node.js", "Laravel"]
+      "skills": ["VB.NET", "C", "Java", "Python", "JavaScript"]
     },
     {
       "title": "Développement Web",
-      "skills": ["HTML", "CSS", "JavaScript", "Front-end", "Back-end"]
+      "skills": ["HTML", "CSS", "JS", "React", "PHP (Laravel)", "Python (Flask)"]
     },
     {
       "title": "Bases de Données",
-      "skills": ["SQL", "T-SQL", "MySQL", "PostgreSQL", "NoSQL"]
+      "skills": ["SQL", "MySQL", "SQL Server", "PostgreSQL", "SQLite", "HiveQL", "Oracle SQL"]
     },
     {
-      "title": "Technologies",
-      "skills": ["Big Data", "Machine Learning", "Deep Learning","NLP"]
-    },
-    {
-      "title": "Design & Modélisation",
+      "title": "Conception & Modélisation",
       "skills": ["UML", "Merise"]
+    },
+    {
+      "title": "Gestion de Projet",
+      "skills": ["Scrum"]
+    },
+    {
+      "title": "Intelligence Artificielle",
+      "skills": ["Machine Learning", "Deep Learning", "NLP", "Transformer Models"]
     },
     {
       "title": "Langues",
