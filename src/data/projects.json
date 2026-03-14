@@ -1,28 +1,60 @@
 {
   "projects": [
     {
+      "id": "rome-ai",
       "title": "RomeAI - Campus Room Manager",
-      "description": "A comprehensive university classroom and session management system featuring a React Native mobile app and a Flask REST API. Streamlines bookings, scheduling, and attendance tracking for students, professors, and admins.",
-      "technologies": ["React Native (Expo)", "Flask", "SQLAlchemy", "SQLite", "Python", "Ngrok"],
-      "githubUrl": "https://github.com/Bouchask/romeAI"
+      "description": "A comprehensive university classroom and session management system featuring a React Native mobile app and a Flask REST API.",
+      "technologies": ["React Native", "Flask", "SQLAlchemy", "SQLite", "Ngrok"],
+      "githubUrl": "https://github.com/Bouchask/romeAI",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_reactnative-mobiledevelopment-flask-activity-7438396977131704321-ffOY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
+      "features": [
+        "Student Role: Dashboard, Schedules, Notifications, and Profile management.",
+        "Professor Role: Session management, Room availability tracking, and Attendance.",
+        "Admin Role: Campus statistics, User/Room management, and Exam scheduling.",
+        "Real-time sync between Mobile app and Flask backend."
+      ]
     },
     {
+      "id": "clustering",
       "title": "Optimal K-Clustering Methodology",
-      "description": "An advanced unsupervised clustering project determining the optimal number of clusters (K) using rigorous mathematical, statistical, and probabilistic criteria like Geometric, Statistical, and Likelihood perspectives.",
-      "technologies": ["Python", "Scikit-learn", "Statistical Modeling", "Matplotlib", "Unsupervised Learning"],
-      "githubUrl": "https://github.com/Bouchask/clustring"
+      "description": "An advanced unsupervised clustering project determining the optimal number of clusters (K) using rigorous mathematical criteria.",
+      "technologies": ["Python", "Scikit-learn", "Statistical Modeling", "Matplotlib"],
+      "githubUrl": "https://github.com/Bouchask/clustring",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_datascience-machinelearning-unsupervisedlearning-activity-7423506793957314560-3QlJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
+      "features": [
+        "Multi-perspective validation: Geometric, Statistical, and Probabilistic metrics.",
+        "Implemented Silhouette, Calinski-Harabasz, Davies-Bouldin, and BIC.",
+        "Consensus-based selection using a democratic voting mechanism.",
+        "Objectivity: Mathematical decision rules replacing subjective visual inspection."
+      ]
     },
     {
+      "id": "oracle-db",
       "title": "Oracle Database Intelligence System",
-      "description": "A database-centric 3-tier architecture for university management. Uses PL/SQL triggers and stored procedures for business logic, featuring role-based dashboards for Admin, Professor, and Students.",
-      "technologies": ["Oracle Database", "PL/SQL", "Python", "Streamlit", "Database Administration"],
-      "githubUrl": "https://github.com/Bouchask/projet_oracle_V2"
+      "description": "A database-centric 3-tier architecture for university management using PL/SQL logic and role-based dashboards.",
+      "technologies": ["Oracle DB", "PL/SQL", "Python", "Streamlit"],
+      "githubUrl": "https://github.com/Bouchask/projet_oracle_V2",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_rapport-technique-activity-7424572267516547072-vRgc?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
+      "features": [
+        "Advanced PL/SQL Triggers and Stored Procedures for business logic enforcement.",
+        "Admin Dashboard: Statistics, Enrollment management, and Conflict-free scheduling.",
+        "Professor Dashboard: Grade submission and Attendance analytics.",
+        "Student Dashboard: Course registration and Personalized academic schedules."
+      ]
     },
     {
+      "id": "siem-ai",
       "title": "SIEM AI Dashboard",
-      "description": "Real-time Security Information and Event Management (SIEM) dashboard. Analyzes Wazuh alerts using Kafka and Local LLMs (Ollama) to classify threats as True or False Positives.",
-      "technologies": ["FastAPI", "Kafka", "Ollama (LLM)", "Wazuh", "SQLite", "React", "Python"],
-      "githubUrl": "https://github.com/Bouchask/siam-stage"
+      "description": "Real-time Security Information and Event Management dashboard analyzing Wazuh alerts using Local LLMs.",
+      "technologies": ["FastAPI", "Kafka", "Ollama (LLM)", "Wazuh", "React"],
+      "githubUrl": "https://github.com/Bouchask/siam-stage",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_cybersecurity-ai-siem-activity-7389277414431809536-TrFh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
+      "features": [
+        "Real-time Alert Processing: Ingests Wazuh alerts via Kafka.",
+        "AI-Powered Analysis: Local LLM (Ollama) classification of True vs False Positives.",
+        "Scalable multi-threaded consumer architecture.",
+        "Modern visualization dashboard for security statistics and live streams."
+      ]
     }
   ]
 }
