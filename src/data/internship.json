@@ -1,14 +1,13 @@
-
 {
   "company": "OCP Phosboucraa",
-  "duration": "2 mois",
-  "role": "Développement Web",
+  "duration": "2 months",
+  "role": "Web Development",
   "technologies": ["Laravel", "Tailwind CSS", "HTML"],
-  "description": "Pendant mon stage au sein d'OCP Phosboucraa, j'ai été chargé de développer une application web interne pour la gestion des rendez-vous médicaux ainsi que la création et la gestion des comptes des docteurs.",
+  "description": "During my internship at OCP Phosboucraa, I was responsible for developing an internal web application for managing medical appointments as well as creating and managing doctor accounts.",
   "learnings": [
-    "Travailler dans un environnement professionnel structuré",
-    "Gérer un projet de bout en bout : de la conception UML à la mise en production",
-    "Collaborer avec des utilisateurs finaux pour comprendre leurs besoins",
-    "Développer mon sens de la rigueur, de l'autonomie et de la responsabilité"
+    "Working in a structured professional environment",
+    "Managing a project from end-to-end: from UML design to production",
+    "Collaborating with end-users to understand their needs",
+    "Developing a sense of rigor, autonomy, and responsibility"
   ]
 }

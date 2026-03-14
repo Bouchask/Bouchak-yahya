@@ -1,64 +1,108 @@
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="pt-24 pb-16 md:pt-32 md:pb-24">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+    <section id="hero" className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-indigo-500/10 rounded-full blur-[100px]"></div>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div 
-          className="space-y-6"
-          initial={{ opacity: 0, x: -20 }}
+          className="space-y-8"
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold text-gray-900"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-            Yahya Bouchak
-          </motion.h1>
-          <motion.h2 
-            className="text-xl md:text-2xl text-purple-700 font-semibold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            Étudiant en SI-IA à FPK Khouribga
-          </motion.h2>
+          <div className="space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium border border-purple-200 dark:border-purple-800"
+            >
+              👋 Welcome to my portfolio
+            </motion.div>
+            <motion.h1 
+              className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              Yahya <span className="text-gradient">Bouchak</span>
+            </motion.h1>
+            <motion.h2 
+              className="text-2xl md:text-3xl font-bold text-slate-600 dark:text-slate-400"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              Master Excellence Student in SIIA at FP Khouribga
+            </motion.h2>
+          </div>
+          
           <motion.p 
-            className="text-gray-600 text-lg"
+            className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            Passionate about computer science and technological innovation, I am constantly seeking learning and stimulating challenges. Specialized in AI and Full-stack development.
+          </motion.p>
+          
+          <motion.div 
+            className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Passionné par l'informatique et l'innovation technologique, je suis en quête constante d'apprentissage et de défis stimulants.
-          </motion.p>
-          <motion.a
-            href="#contact"
-            className="inline-flex items-center space-x-2 bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>Me contacter</span>
-            <ArrowRight size={20} />
-          </motion.a>
+            <motion.a
+              href="#contact"
+              className="group inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>Contact me</span>
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </motion.a>
+            <motion.a
+              href="#projects"
+              className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-4 rounded-full font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>View my projects</span>
+            </motion.a>
+          </motion.div>
         </motion.div>
+
         <motion.div 
-          className="flex justify-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          className="relative flex justify-center lg:justify-end"
+          initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <motion.img
-            src="/lovable-uploads/66d6a5fd-86ee-4345-a5d1-bf0dd9130a15.png"
-            alt="Yahya Bouchak"
-            className="rounded-2xl shadow-2xl w-64 md:w-80 object-cover"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
+          <div className="relative z-10">
+            <div className="absolute -inset-4 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+            <motion.div
+              className="relative rounded-3xl overflow-hidden border-8 border-white dark:border-slate-900 shadow-2xl w-72 md:w-96"
+              whileHover={{ scale: 1.02, rotate: -1 }}
+              transition={{ duration: 0.4 }}
+            >
+              <img
+                src="/lovable-uploads/66d6a5fd-86ee-4345-a5d1-bf0dd9130a15.png"
+                alt="Yahya Bouchak"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100 dark:bg-purple-900/20 rounded-full -z-10 blur-xl"></div>
+          <div className="absolute -top-6 -left-6 w-24 h-24 bg-indigo-100 dark:bg-indigo-900/20 rounded-full -z-10 blur-xl"></div>
         </motion.div>
       </div>
     </section>

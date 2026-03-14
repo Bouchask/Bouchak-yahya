@@ -1,32 +1,32 @@
 {
   "skillCategories": [
     {
-      "title": "Langages de Programmation",
+      "title": "Programming Languages",
       "skills": ["VB.NET", "C", "Java", "Python", "JavaScript"]
     },
     {
-      "title": "Développement Web",
+      "title": "Web Development",
       "skills": ["HTML", "CSS", "JS", "React", "PHP (Laravel)", "Python (Flask)"]
     },
     {
-      "title": "Bases de Données",
+      "title": "Databases",
       "skills": ["SQL", "MySQL", "SQL Server", "PostgreSQL", "SQLite", "HiveQL", "Oracle SQL"]
     },
     {
-      "title": "Conception & Modélisation",
+      "title": "Design & Modeling",
       "skills": ["UML", "Merise"]
     },
     {
-      "title": "Gestion de Projet",
+      "title": "Project Management",
       "skills": ["Scrum"]
     },
     {
-      "title": "Intelligence Artificielle",
+      "title": "Artificial Intelligence",
       "skills": ["Machine Learning", "Deep Learning", "NLP", "Transformer Models"]
     },
     {
-      "title": "Langues",
-      "skills": ["Français (niveau avancé)", "Anglais (niveau moyen)"]
+      "title": "Languages",
+      "skills": ["French (Advanced)", "English (Intermediate)"]
     }
   ]
 }

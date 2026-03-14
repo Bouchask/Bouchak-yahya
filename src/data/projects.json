@@ -1,40 +1,28 @@
 {
   "projects": [
     {
-      "title": "Gestion des Événements",
-      "description": "Application de gestion d'événements utilisant le pattern MVC pour une meilleure organisation du code.",
-      "technologies": ["MVC", "PHP", "MySQL"],
-      "githubUrl": "https://github.com/Bouchask/gestion-evenement"
+      "title": "RomeAI - Campus Room Manager",
+      "description": "A comprehensive university classroom and session management system featuring a React Native mobile app and a Flask REST API. Streamlines bookings, scheduling, and attendance tracking for students, professors, and admins.",
+      "technologies": ["React Native (Expo)", "Flask", "SQLAlchemy", "SQLite", "Python", "Ngrok"],
+      "githubUrl": "https://github.com/Bouchask/romeAI"
     },
     {
-      "title": "3D Game with AI",
-      "description": "Jeu 3D intégrant un module de reinforcement learning pour l'intelligence artificielle.",
-      "technologies": ["Three.js", "React", "Reinforcement Learning"],
-      "githubUrl": "https://github.com/Bouchask/edu-course-network"
+      "title": "Optimal K-Clustering Methodology",
+      "description": "An advanced unsupervised clustering project determining the optimal number of clusters (K) using rigorous mathematical, statistical, and probabilistic criteria like Geometric, Statistical, and Likelihood perspectives.",
+      "technologies": ["Python", "Scikit-learn", "Statistical Modeling", "Matplotlib", "Unsupervised Learning"],
+      "githubUrl": "https://github.com/Bouchask/clustring"
     },
     {
-      "title": "Détection et Clustering de Visages",
-      "description": "Application intelligente de traitement vidéo utilisant Streamlit, InsightFace et Mediapipe pour détecter, compter, et regrouper les visages similaires dans une vidéo.",
-      "technologies": ["Python", "Streamlit", "InsightFace", "HDBSCAN", "MediaPipe", "OpenCV"],
-      "githubUrl": "https://github.com/Bouchask/D-tection-et-de-Clustering-des-Visages"
+      "title": "Oracle Database Intelligence System",
+      "description": "A database-centric 3-tier architecture for university management. Uses PL/SQL triggers and stored procedures for business logic, featuring role-based dashboards for Admin, Professor, and Students.",
+      "technologies": ["Oracle Database", "PL/SQL", "Python", "Streamlit", "Database Administration"],
+      "githubUrl": "https://github.com/Bouchask/projet_oracle_V2"
     },
     {
-      "title": "NLP Sentiment Analysis",
-      "description": "Application Streamlit pour analyser les sentiments des commentaires YouTube (en anglais) sur des séries populaires comme Game of Thrones, La Casa de Papel, et Stranger Things, avec visualisations interactives.",
-      "technologies": ["Python", "Streamlit", "YouTube Data API v3", "DistilRoBERTa", "Plotly", "WordCloud", "Langdetect", "Pandas", "Google API Client", "Dotenv", "Matplotlib"],
-      "githubUrl": "https://github.com/Bouchask/nlp_sentiment_project"
-    },
-    {
-      "title": "Smart Detection: Fingers & Emotions",
-      "description": "A Streamlit-based application for real-time finger counting and emotion detection using a webcam, leveraging MediaPipe for hand tracking and DeepFace for emotion recognition.",
-      "technologies": ["Python", "Streamlit", "MediaPipe", "DeepFace", "OpenCV", "NumPy"],
-      "githubUrl": "https://github.com/Bouchask/detection_face"
-    },
-    {
-      "title": "Trading Prediction System for NASDAQ 100",
-      "description": "Système de prédiction de trading pour l'indice NASDAQ 100 utilisant un modèle hybride CNN-LSTM-GRU, avec une interface utilisateur Streamlit pour des prédictions en temps réel.",
-      "technologies": ["Python", "Streamlit", "TensorFlow", "yfinance", "Pandas", "NumPy", "Scikit-learn", "Joblib"],
-      "githubUrl": "https://github.com/Bouchask/prediction_nasdaq"
+      "title": "SIEM AI Dashboard",
+      "description": "Real-time Security Information and Event Management (SIEM) dashboard. Analyzes Wazuh alerts using Kafka and Local LLMs (Ollama) to classify threats as True or False Positives.",
+      "technologies": ["FastAPI", "Kafka", "Ollama (LLM)", "Wazuh", "SQLite", "React", "Python"],
+      "githubUrl": "https://github.com/Bouchask/siam-stage"
     }
   ]
 }
