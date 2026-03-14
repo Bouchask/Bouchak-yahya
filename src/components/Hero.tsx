@@ -99,7 +99,7 @@ const Hero = () => {
               transition={{ duration: 0.4 }}
             >
               <img
-                src="/lovable-uploads/66d6a5fd-86ee-4345-a5d1-bf0dd9130a15.png"
+                src="/assets/profile.png"
                 alt="Yahya Bouchak"
                 className="w-full h-full object-cover"
               />
