@@ -65,7 +65,7 @@ const Hero = () => {
           >
             <motion.a
               href="#contact"
-              className="group inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+              className="group inline-flex items-center gap-2 bg-[#1e1b4b]/80 backdrop-blur-md text-purple-300 px-8 py-4 rounded-full font-semibold border-2 border-purple-500/50 hover:bg-purple-600/40 hover:border-purple-400 transition-all shadow-[0_0_15px_rgba(139,92,246,0.5)] hover:shadow-[0_0_25px_rgba(139,92,246,0.8)]"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -75,7 +75,7 @@ const Hero = () => {
             <motion.a
               href={cvPath}
               download
-              className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-8 py-4 rounded-full font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
+              className="inline-flex items-center gap-2 bg-[#082f49]/80 backdrop-blur-md text-cyan-300 px-8 py-4 rounded-full font-semibold border-2 border-cyan-500/50 hover:bg-cyan-600/40 hover:border-cyan-400 transition-all shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)]"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -94,8 +94,8 @@ const Hero = () => {
           <div className="relative z-10">
             <div className="absolute -inset-4 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
             <motion.div
-              className="relative rounded-3xl overflow-hidden border-8 border-white dark:border-slate-900 shadow-2xl w-72 md:w-96"
-              whileHover={{ scale: 1.02, rotate: -1 }}
+              className="relative rounded-3xl overflow-hidden border-4 border-purple-500/50 bg-[#0f0c29]/50 backdrop-blur-sm shadow-[0_0_40px_rgba(139,92,246,0.6)] w-72 md:w-96"
+              whileHover={{ scale: 1.02, rotate: -1, boxShadow: "0 0 60px rgba(6,182,212,0.8)", borderColor: "rgba(6,182,212,0.8)" }}
               transition={{ duration: 0.4 }}
             >
               <img
