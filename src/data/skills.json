@@ -1,28 +1,28 @@
 {
   "skillCategories": [
     {
-      "title": "Programming Languages",
-      "skills": ["VB.NET", "C", "Java", "Python", "JavaScript"]
+      "title": "AI & Machine Learning",
+      "skills": ["Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Streamlit", "Ollama LLM"]
     },
     {
-      "title": "Web Development",
-      "skills": ["HTML", "CSS", "JS", "React", "PHP (Laravel)", "Python (Flask)"]
+      "title": "Computer Vision & NLP",
+      "skills": ["OpenCV", "YOLOv8", "ArcFace", "FAISS", "InsightFace", "HuggingFace", "DistilRoBERTa"]
+    },
+    {
+      "title": "Big Data & Engineering",
+      "skills": ["Apache Kafka", "Apache Spark", "Hadoop", "Hive", "Wazuh SIEM", "UML Design"]
+    },
+    {
+      "title": "Web & Backend",
+      "skills": ["React", "React Native", "FastAPI", "Flask", "Laravel", "Tailwind CSS", "TypeScript"]
     },
     {
       "title": "Databases",
-      "skills": ["SQL", "MySQL", "SQL Server", "PostgreSQL", "SQLite", "HiveQL", "Oracle SQL"]
+      "skills": ["MySQL", "PostgreSQL", "Oracle PL/SQL", "SQLite", "SQL Server"]
     },
     {
-      "title": "Design & Modeling",
-      "skills": ["UML", "Merise"]
-    },
-    {
-      "title": "Project Management",
-      "skills": ["Scrum"]
-    },
-    {
-      "title": "Artificial Intelligence",
-      "skills": ["Machine Learning", "Deep Learning", "NLP", "Transformer Models"]
+      "title": "Tools & DevOps",
+      "skills": ["Git", "Docker", "Linux", "Ngrok", "Postman", "VS Code"]
     }
   ]
 }

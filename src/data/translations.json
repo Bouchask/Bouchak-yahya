@@ -10,46 +10,46 @@
     },
     "hero": {
       "welcome": "👋 Welcome to my portfolio",
-      "subtitle": "Master Excellence Student in SIIA at FP Khouribga",
-      "description": "Passionate about computer science and technological innovation, I am constantly seeking learning and stimulating challenges. Specialized in AI and Full-stack development.",
-      "contactBtn": "Contact me",
-      "projectsBtn": "View my projects",
+      "subtitle": "AI Engineering & Full-Stack Development",
+      "description": "Building intelligent systems that solve real problems — from real-time security classification with LLMs to production-grade computer vision pipelines.",
+      "contactBtn": "Let's Connect",
+      "projectsBtn": "Featured Projects",
       "downloadCV": "Download CV"
     },
     "about": {
       "title": "About Me",
-      "journey": "My Journey",
-      "p1": "I am Yahya Bouchak, a computer science student at FP Khouribga, pursuing a Master's Excellence degree in Intelligent Systems and Artificial Intelligence (SIIA). My academic background reflects my commitment to excellence.",
-      "p2": "Passionate about solving complex problems and creating innovative solutions, I combine my technical skills in Full-stack development with my deep knowledge of AI to build high-impact projects.",
+      "journey": "Intelligent Impact",
+      "p1": "I am Yahya Bouchak, a Master's student in Information Systems & Artificial Intelligence (SIIA) at the Polydisciplinary Faculty of Khouribga (FPK), Morocco. I specialize in building end-to-end intelligent systems.",
+      "p2": "From classification of security alerts using local LLMs to automated face recognition portals, I combine full-stack expertise with cutting-edge AI (Computer Vision, NLP, Big Data) to create production-ready solutions.",
       "education": "Education",
-      "master": "Master Excellence in SIIA - FP Khouribga",
-      "bachelor": "Bachelor's Excellence in SIIA - FP Khouribga",
-      "bts": "BTS in DSI",
+      "master": "Master Excellence — SIIA (Information Systems & AI)",
+      "bachelor": "Bachelor Excellence — SIIA (Information Systems & AI)",
+      "bts": "BTS — DSI (Information Systems Development)",
       "inProgress": "In Progress",
-      "gradLastYear": "Graduated Last Year",
-      "gradHonors": "Graduated with 'Very Good' Honors",
+      "gradLastYear": "Graduated",
+      "gradHonors": "Graduated with Honors: Very Good",
       "softSkills": "Soft Skills"
     },
     "skills": {
-      "title": "Skills"
+      "title": "Tech Stack"
     },
     "projects": {
-      "title": "Projects",
-      "learnMore": "Learn more"
+      "title": "Featured Projects",
+      "learnMore": "View Project Details"
     },
     "experience": {
-      "title": "Experience",
-      "mission": "Mission Description",
-      "keyPoints": "Key Points"
+      "title": "Professional Experience",
+      "mission": "Mission & Impact",
+      "keyPoints": "Core Learnings"
     },
     "contact": {
-      "title": "Contact",
+      "title": "Get In Touch",
       "email": "Email Me",
       "linkedin": "LinkedIn",
       "github": "GitHub",
-      "workTogether": "Let's work together!",
-      "description": "I am currently looking for new opportunities and stimulating projects. Feel free to contact me!",
-      "sendBtn": "Send a message"
+      "workTogether": "Let's Build the Future!",
+      "description": "I am actively seeking an internship in AI, Data Science, or Software Engineering. Let's discuss how I can contribute to your team.",
+      "sendBtn": "Send Message"
     }
   },
   "fr": {
@@ -63,46 +63,46 @@
     },
     "hero": {
       "welcome": "👋 Bienvenue sur mon portfolio",
-      "subtitle": "Étudiant en Master Excellence SIIA à la FP Khouribga",
-      "description": "Passionné par l'informatique et l'innovation technologique, je suis en quête constante d'apprentissage et de défis stimulants. Spécialisé en IA et développement Full-stack.",
-      "contactBtn": "Me contacter",
-      "projectsBtn": "Voir mes projets",
+      "subtitle": "Ingénierie IA & Développement Full-Stack",
+      "description": "Je conçois des systèmes intelligents qui résolvent des problèmes concrets — de la classification de sécurité par LLM aux pipelines de vision par ordinateur.",
+      "contactBtn": "Discutons",
+      "projectsBtn": "Projets Phares",
       "downloadCV": "Télécharger CV"
     },
     "about": {
       "title": "À propos de moi",
-      "journey": "Mon Parcours",
-      "p1": "Je suis Yahya Bouchak, étudiant en informatique à la FP Khouribga, poursuivant un Master Excellence en Systèmes Intelligents et Intelligence Artificielle (SIIA). Mon parcours académique témoigne de mon engagement envers l'excellence.",
-      "p2": "Passionné par la résolution de problèmes complexes et la création de solutions innovantes, je combine mes compétences techniques en développement Full-stack avec mes connaissances approfondies en IA pour construire des projets à fort impact.",
+      "journey": "Impact Intelligent",
+      "p1": "Je suis Yahya Bouchak, étudiant en Master Excellence en Systèmes d'Information et Intelligence Artificielle (SIIA) à la Faculté Polydisciplinaire de Khouribga (FPK), Maroc.",
+      "p2": "De la classification d'alertes de sécurité par LLM aux portails automatisés de reconnaissance faciale, je combine expertise Full-stack et IA de pointe (Computer Vision, NLP, Big Data) pour créer des solutions prêtes pour la production.",
       "education": "Formation",
-      "master": "Master Excellence en SIIA - FP Khouribga",
-      "bachelor": "Licence d'Excellence en SIIA - FP Khouribga",
-      "bts": "BTS en DSI",
+      "master": "Master Excellence — SIIA (Systèmes d'Information & IA)",
+      "bachelor": "Licence Excellence — SIIA (Systèmes d'Information & IA)",
+      "bts": "BTS — DSI (Développement des Systèmes d'Information)",
       "inProgress": "En cours",
-      "gradLastYear": "Diplômé l'année dernière",
-      "gradHonors": "Mention 'Très Bien'",
+      "gradLastYear": "Diplômé",
+      "gradHonors": "Mention : Très Bien",
       "softSkills": "Soft Skills"
     },
     "skills": {
-      "title": "Compétences"
+      "title": "Tech Stack"
     },
     "projects": {
-      "title": "Projets",
-      "learnMore": "En savoir plus"
+      "title": "Projets Phares",
+      "learnMore": "Détails du projet"
     },
     "experience": {
-      "title": "Expérience",
-      "mission": "Description de la mission",
-      "keyPoints": "Points clés"
+      "title": "Expérience Professionnelle",
+      "mission": "Mission & Impact",
+      "keyPoints": "Apprentissages Clés"
     },
     "contact": {
       "title": "Contact",
-      "email": "M'envoyer un email",
+      "email": "Email",
       "linkedin": "LinkedIn",
       "github": "GitHub",
-      "workTogether": "Travaillons ensemble !",
-      "description": "Je suis actuellement à la recherche de nouvelles opportunités et de projets stimulants. N'hésitez pas à me contacter !",
-      "sendBtn": "Envoyer un message"
+      "workTogether": "Construisons l'Avenir !",
+      "description": "Je suis activement à la recherche d'un stage en IA, Data Science ou Génie Logiciel. Discutons de la manière dont je peux contribuer à votre équipe.",
+      "sendBtn": "Envoyer"
     }
   }
 }
