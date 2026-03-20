@@ -1,74 +1,99 @@
-import internshipData from '../data/internship.json';
 import { motion } from 'framer-motion';
-import { Briefcase, CheckCircle2 } from 'lucide-react';
-import { useLanguage } from '@/lib/LanguageContext';
+import { GitCommit, GitBranch } from 'lucide-react';
+import internshipData from '../data/internship.json';
 
 const Internship = () => {
-  const { t } = useLanguage();
-
   return (
-    <section id="internship" className="py-16">
-      <div className="flex flex-col items-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">{t('experience.title')}</h2>
-        <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"></div>
+    <section id="internship" className="py-20 relative">
+      <div className="container mx-auto px-4 max-w-4xl">
+        
+        <div className="flex items-center gap-2 mb-12">
+          <GitBranch className="text-neon-purple" />
+          <h2 className="text-2xl font-mono text-slate-800 dark:text-slate-200">git log --oneline --experience</h2>
+        </div>
+
+        <div className="relative pl-8 md:pl-0">
+          {/* Main Git Branch Line */}
+          <div className="absolute left-[39px] md:left-1/2 top-0 bottom-0 w-px bg-slate-300 dark:bg-slate-800 transform md:-translate-x-1/2" />
+
+          {/* Experience Node */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative mb-12"
+          >
+            {/* Commit Node */}
+            <div className="absolute left-[-40px] md:left-1/2 top-6 w-4 h-4 bg-neon-purple rounded-full border-4 border-white dark:border-[#09090b] transform md:-translate-x-1/2 glow-purple z-10" />
+
+            <div className="md:w-1/2 md:pr-12 md:text-right">
+              <div className="ide-window p-6 text-left inline-block w-full">
+                <div className="flex items-center gap-2 text-slate-500 text-xs mb-4 border-b border-slate-200 dark:border-slate-800 pb-2">
+                  <GitCommit size={14} className="text-neon-cyan" />
+                  <span>commit 8f3a9b2</span>
+                </div>
+                
+                <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-1 font-mono">
+                  {internshipData.role}
+                </h3>
+                <h4 className="text-neon-purple font-mono text-sm mb-4">@ {internshipData.company}</h4>
+                
+                <p className="text-slate-600 dark:text-slate-400 text-xs leading-relaxed font-mono mb-4">
+                  {internshipData.description}
+                </p>
+
+                <div className="space-y-2 mb-4">
+                  {internshipData.learnings.map((learning, i) => (
+                    <div key={i} className="flex gap-2 text-[10px] font-mono text-slate-500">
+                      <span className="text-neon-green">+</span> {learning}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                  {internshipData.technologies.map(tech => (
+                    <span key={tech} className="text-[10px] text-slate-400 font-mono">
+                      #{tech.toLowerCase().replace(' ', '_')}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Education Node (Mocked as another commit for completeness of the timeline) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="absolute left-[-40px] md:left-1/2 top-6 w-4 h-4 bg-neon-cyan rounded-full border-4 border-white dark:border-[#09090b] transform md:-translate-x-1/2 glow-cyan z-10" />
+
+            <div className="md:w-1/2 md:ml-auto md:pl-12">
+              <div className="ide-window p-6 text-left inline-block w-full">
+                <div className="flex items-center gap-2 text-slate-500 text-xs mb-4 border-b border-slate-200 dark:border-slate-800 pb-2">
+                  <GitCommit size={14} className="text-neon-green" />
+                  <span>commit 4a1c7e9</span>
+                </div>
+                
+                <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-1 font-mono">
+                  Master's in Information Systems & AI
+                </h3>
+                <h4 className="text-neon-cyan font-mono text-sm mb-4">@ FPK, Morocco</h4>
+                
+                <div className="flex gap-2 text-[10px] font-mono text-slate-500">
+                  <span className="text-neon-green">+</span> Specializing in AI, Computer Vision, and Big Data
+                </div>
+                <div className="flex gap-2 text-[10px] font-mono text-slate-500">
+                  <span className="text-neon-green">+</span> Building end-to-end intelligent systems
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
-
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="glass rounded-3xl p-8 md:p-10"
-      >
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-          <div className="flex items-center gap-4">
-            <div className="p-3 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-2xl">
-              <Briefcase size={28} />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{internshipData.company}</h3>
-              <p className="text-purple-600 dark:text-purple-400 font-semibold">{internshipData.role} • {internshipData.duration}</p>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {internshipData.technologies.map((tech) => (
-              <span 
-                key={tech}
-                className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg text-sm font-bold border border-slate-200 dark:border-slate-700"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white">{t('experience.mission')}</h4>
-            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
-              {internshipData.description}
-            </p>
-          </div>
-          
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white">{t('experience.keyPoints')}</h4>
-            <ul className="space-y-3">
-              {internshipData.learnings.map((learning, index) => (
-                <motion.li 
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 * index }}
-                  className="flex items-start gap-3 text-slate-600 dark:text-slate-400"
-                >
-                  <CheckCircle2 size={20} className="text-purple-600 dark:text-purple-400 mt-1 shrink-0" />
-                  <span className="text-sm font-medium">{learning}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 };

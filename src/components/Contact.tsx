@@ -1,81 +1,85 @@
-import { Github, Linkedin, Mail, Send } from 'lucide-react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Terminal } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
-
-const ContactLink = ({ href, icon: Icon, label }: { href: string; icon: any; label: string }) => (
-  <motion.a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ y: -5 }}
-    className="flex items-center gap-6 p-6 glass rounded-2xl group transition-all w-full"
-  >
-    <div className="p-4 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-2xl group-hover:bg-purple-600 group-hover:text-white dark:group-hover:bg-purple-600 transition-all duration-300 flex-shrink-0">
-      <Icon size={28} />
-    </div>
-    <div className="min-w-0 flex-1">
-      <p className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-        {label}
-      </p>
-    </div>
-  </motion.a>
-);
 
 const Contact = () => {
   const { t } = useLanguage();
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState<{sender: string, text: string}[]>([
+    { sender: 'system', text: 'Connection established.' },
+    { sender: 'system', text: 'Type your message and press Enter to send, or type "mailto" to open email client.' }
+  ]);
 
-  const contactLinks = [
-    {
-      href: "mailto:mr.bouchakyahya@gmail.com",
-      icon: Mail,
-      label: t('contact.email'),
-    },
-    {
-      href: "https://www.linkedin.com/in/yahyabouchak",
-      icon: Linkedin,
-      label: t('contact.linkedin'),
-    },
-    {
-      href: "https://github.com/Bouchask",
-      icon: Github,
-      label: t('contact.github'),
-    },
-  ];
+  const handleCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && input.trim()) {
+      const newCmd = input.trim();
+      setMessages(prev => [...prev, { sender: 'guest', text: newCmd }]);
+      setInput('');
+
+      setTimeout(() => {
+        if (newCmd.toLowerCase() === 'mailto') {
+          window.location.href = 'mailto:mr.bouchakyahya@gmail.com';
+          setMessages(prev => [...prev, { sender: 'system', text: 'Opening mail client...' }]);
+        } else {
+          setMessages(prev => [...prev, { sender: 'system', text: 'Message logged. I will reply to you soon. Contact via email directly at mr.bouchakyahya@gmail.com for faster response.' }]);
+        }
+      }, 500);
+    }
+  };
 
   return (
-    <section id="contact" className="py-16">
-      <div className="flex flex-col items-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">{t('contact.title')}</h2>
-        <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"></div>
-      </div>
-      
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {contactLinks.map((link) => (
-            <div key={link.label} className="flex">
-              <ContactLink {...link} />
-            </div>
-          ))}
-        </div>
+    <section id="contact" className="py-20 relative">
+      <div className="container mx-auto px-4">
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 glass p-8 rounded-3xl text-center space-y-6"
-        >
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{t('contact.workTogether')}</h3>
-          <p className="text-slate-600 dark:text-slate-400 max-w-lg mx-auto leading-relaxed">
-            {t('contact.description')}
-          </p>
-          <a
-            href="mailto:mr.bouchakyahya@gmail.com"
-            className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
-          >
-            <span>{t('contact.sendBtn')}</span>
-            <Send size={20} />
-          </a>
-        </motion.div>
+        <div className="ide-window max-w-3xl mx-auto h-[400px] flex flex-col">
+          <div className="ide-header justify-between">
+            <div className="flex items-center gap-2">
+              <Terminal size={14} className="text-slate-500" />
+              <span className="text-[10px] text-slate-500">guest@portfolio: ~/contact</span>
+            </div>
+            <div className="flex gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700" />
+              <div className="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700" />
+            </div>
+          </div>
+          
+          <div className="p-6 font-mono text-sm leading-relaxed flex-1 overflow-y-auto bg-slate-50 dark:bg-[#09090b] flex flex-col justify-end">
+            <div className="space-y-2 mb-4">
+              {messages.map((msg, i) => (
+                <div key={i} className="flex gap-2">
+                  {msg.sender === 'system' ? (
+                    <span className="text-slate-500">[{msg.sender}]</span>
+                  ) : (
+                    <span className="text-neon-cyan">guest@portfolio:~$</span>
+                  )}
+                  <span className={msg.sender === 'system' ? 'text-slate-600 dark:text-slate-400' : 'text-slate-800 dark:text-slate-200'}>
+                    {msg.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex gap-2 items-center">
+              <span className="text-neon-cyan">guest@portfolio:~$</span>
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleCommand}
+                className="flex-1 bg-transparent border-none outline-none text-slate-800 dark:text-slate-200 font-mono text-sm focus:ring-0"
+                placeholder="type a message..."
+                autoComplete="off"
+                spellCheck="false"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-8 text-slate-500 text-xs font-mono">
+          <p>© {new Date().getFullYear()} Yahya Bouchak. All systems functional.</p>
+        </div>
+
       </div>
     </section>
   );
