@@ -6,7 +6,7 @@
       "description": "Real-time security alert classification using local LLMs. Ingests Wazuh alerts via Apache Kafka and classifies them using Ollama.",
       "technologies": ["FastAPI", "React", "Apache Kafka", "Ollama LLM", "Wazuh", "Python"],
       "githubUrl": "https://github.com/Bouchask/siam-stage",
-      "linkedinUrl": "https://linkedin.com/in/yahyabouchak",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_cybersecurity-ai-siem-share-7389277413135839232-d68H?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
       "features": [
         "Real-time Alert Processing via Kafka.",
         "AI-Powered classification (True/False Positive) using local LLMs.",
@@ -34,7 +34,7 @@
       "description": "University room & session management platform with a React Native mobile application and a Flask REST API.",
       "technologies": ["React Native", "Flask", "SQLAlchemy", "SQLite", "Ngrok"],
       "githubUrl": "https://github.com/Bouchask/romeAI",
-      "linkedinUrl": "https://linkedin.com/in/yahyabouchak",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_reactnative-mobiledevelopment-flask-activity-7438396977131704321-ffOY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
       "features": [
         "Mobile app for room bookings and schedules.",
         "RESTful API backend with secure tunneling via Ngrok.",
@@ -76,7 +76,7 @@
       "description": "Sentiment detection application built on a fine-tuned DistilRoBERTa model from HuggingFace Transformers.",
       "technologies": ["Python", "DistilRoBERTa", "HuggingFace", "Streamlit"],
       "githubUrl": "https://github.com/Bouchask/nlp_sentiment_project",
-      "linkedinUrl": "https://linkedin.com/in/yahyabouchak",
+      "linkedinUrl": "https://www.linkedin.com/posts/yahyabouchak_datascience-nlp-ia-activity-7324906617034993664-0B2f?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6CEVcBpk930PqjxgztmWHZo7T5ewtY250",
       "features": [
         "Fine-tuned Transformer model (DistilRoBERTa).",
         "Interactive web application with Streamlit.",
