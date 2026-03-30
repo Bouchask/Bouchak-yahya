@@ -1,25 +1,32 @@
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
-import Internship from '@/components/Internship';
-import Contact from '@/components/Contact';
-import Navbar from '@/components/Navbar';
-import AnimatedBackground from '@/components/AnimatedBackground';
+import Navbar from "@/components/Navbar";
+import TrainingBackground from "@/components/TrainingBackground";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import TimelineSection from "@/components/TimelineSection";
+import ContactSection from "@/components/ContactSection";
+import { useLang } from "@/contexts/LangContext";
 
 const Index = () => {
+  const { t } = useLang();
+
   return (
-    <div className="min-h-screen bg-transparent transition-colors duration-300">
-      <AnimatedBackground />
+    <div className="relative min-h-screen">
       <Navbar />
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24 pb-20">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Internship />
-        <Contact />
-      </main>
+      <TrainingBackground />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <TimelineSection />
+      <ContactSection />
+
+      <footer className="py-8 text-center border-t border-border">
+        <p className="text-xs font-mono text-muted-foreground">
+          {t("footer.text")}<span className="text-terminal-cyan">process.exit(0)</span>
+        </p>
+      </footer>
     </div>
   );
 };

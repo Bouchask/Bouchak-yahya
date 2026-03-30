@@ -1,24 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
-    --border: 240 5.9% 90%;
-    --neon-green: 142 71% 45%;
-    --neon-cyan: 192 100% 50%;
-    --neon-purple: 270 100% 65%;
+  :root, .dark {
+    --background: 0 0% 3%;
+    --foreground: 120 5% 82%;
+    --card: 0 0% 5%;
+    --card-foreground: 120 5% 82%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 120 5% 82%;
+    --primary: 142 72% 50%;
+    --primary-foreground: 0 0% 3%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 120 5% 82%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 3%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 142 72% 50%;
+    --radius: 0.5rem;
+    --terminal-green: 142 72% 50%;
+    --terminal-cyan: 187 92% 55%;
+    --terminal-amber: 38 92% 50%;
+    --terminal-red: 0 72% 51%;
+    --terminal-purple: 265 80% 60%;
+    --terminal-dim: 0 0% 25%;
+    --titlebar-bg: 0 0% 6%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 120 5% 82%;
+    --sidebar-primary: 142 72% 50%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 120 5% 82%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 142 72% 50%;
   }
 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --neon-green: 142 71% 45%;
-    --neon-cyan: 192 100% 50%;
-    --neon-purple: 270 100% 65%;
+  .light {
+    --background: 44 25% 93%;
+    --foreground: 0 0% 15%;
+    --card: 44 20% 90%;
+    --card-foreground: 0 0% 15%;
+    --popover: 44 20% 90%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 142 60% 32%;
+    --primary-foreground: 44 25% 93%;
+    --secondary: 44 15% 85%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 44 15% 87%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 199 70% 38%;
+    --accent-foreground: 44 25% 93%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 44 10% 78%;
+    --input: 44 10% 78%;
+    --ring: 142 60% 32%;
+    --terminal-green: 142 60% 32%;
+    --terminal-cyan: 187 70% 35%;
+    --terminal-amber: 38 70% 40%;
+    --terminal-red: 0 60% 45%;
+    --terminal-purple: 265 50% 45%;
+    --terminal-dim: 0 0% 60%;
+    --titlebar-bg: 44 15% 86%;
+    --sidebar-background: 44 20% 91%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 142 60% 32%;
+    --sidebar-primary-foreground: 44 25% 93%;
+    --sidebar-accent: 44 15% 85%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 44 10% 78%;
+    --sidebar-ring: 142 60% 32%;
   }
 }
 
@@ -26,50 +85,181 @@
   * {
     @apply border-border;
   }
-  
+
   body {
-    @apply bg-background text-foreground font-mono antialiased selection:bg-green-500/30 selection:text-green-300;
+    @apply bg-background text-foreground;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
 
-  /* Custom Scrollbar for Terminal feel */
-  ::-webkit-scrollbar {
-    width: 8px;
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--primary));
   }
-  ::-webkit-scrollbar-track {
-    @apply bg-slate-100 dark:bg-[#09090b];
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700 transition-colors;
-  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--terminal-dim)); border-radius: 3px; }
 }
 
-@layer utilities {
-  .text-neon-green {
-    color: hsl(var(--neon-green));
+@layer components {
+  .terminal-window {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
   }
-  .text-neon-cyan {
-    color: hsl(var(--neon-cyan));
+
+  .terminal-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: hsl(var(--titlebar-bg));
+    border-bottom: 1px solid hsl(var(--border));
+    transition: background-color 0.4s ease;
   }
-  .text-neon-purple {
-    color: hsl(var(--neon-purple));
+
+  .terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .terminal-dot-red { background: hsl(var(--terminal-red)); }
+  .terminal-dot-amber { background: hsl(var(--terminal-amber)); }
+  .terminal-dot-green { background: hsl(var(--terminal-green)); }
+
+  .terminal-body {
+    padding: 16px 20px;
+    font-family: 'Fira Code', 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 100px;
   }
-  .glow-green {
-    box-shadow: 0 0 15px hsl(var(--neon-green) / 0.2);
+
+  .prompt { color: hsl(var(--primary)); }
+  .prompt::before { content: '❯ '; color: hsl(var(--primary)); }
+
+  .glow-text {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5), 0 0 30px hsl(var(--primary) / 0.2);
   }
-  .glow-cyan {
-    box-shadow: 0 0 15px hsl(var(--neon-cyan) / 0.2);
+  .light .glow-text {
+    text-shadow: none;
   }
-  .glow-purple {
-    box-shadow: 0 0 15px hsl(var(--neon-purple) / 0.2);
+
+  .glow-text-cyan {
+    color: hsl(var(--terminal-cyan));
+    text-shadow: 0 0 10px hsl(var(--terminal-cyan) / 0.5), 0 0 30px hsl(var(--terminal-cyan) / 0.2);
   }
-  .ide-window {
-    @apply bg-white dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden shadow-xl dark:shadow-2xl;
+  .light .glow-text-cyan {
+    text-shadow: none;
   }
-  .ide-header {
-    @apply flex items-center px-4 py-2 bg-slate-100 dark:bg-[#121214] border-b border-slate-200 dark:border-slate-800;
+
+  .glass-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+  }
+  .glass-card:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.15);
+    transform: translateY(-2px);
+  }
+
+  .badge-skill {
+    @apply px-2.5 py-1 text-xs font-mono rounded;
+    background: hsl(var(--secondary));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--primary));
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
+
+  .cursor-blink {
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background: hsl(var(--primary));
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .scanline-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 2px,
+      hsl(0 0% 0% / 0.03) 2px, hsl(0 0% 0% / 0.03) 4px
+    );
+  }
+  .light .scanline-overlay {
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 2px,
+      hsl(0 0% 50% / 0.02) 2px, hsl(0 0% 50% / 0.02) 4px
+    );
+  }
+
+  /* Profile image terminal style */
+  .profile-terminal {
+    position: relative;
+    overflow: hidden;
+  }
+  .profile-terminal img {
+    filter: grayscale(100%) brightness(0.8) contrast(1.2) sepia(100%) hue-rotate(70deg) saturate(3);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  .profile-terminal:hover img {
+    filter: none;
+    transform: scale(1.03);
+  }
+  /* CRT scanline on hover */
+  .profile-terminal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 1px,
+      hsl(var(--primary) / 0.06) 1px, hsl(var(--primary) / 0.06) 2px
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .profile-terminal:hover::after {
+    opacity: 1;
+    animation: scanline-flicker 0.15s ease infinite;
+  }
+  @keyframes scanline-flicker {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.4; }
+  }
+  /* Glitch border on hover */
+  .profile-terminal::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    border: 2px solid hsl(var(--primary) / 0);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .profile-terminal:hover::before {
+    border-color: hsl(var(--primary) / 0.6);
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.3), inset 0 0 15px hsl(var(--primary) / 0.1);
   }
 }
