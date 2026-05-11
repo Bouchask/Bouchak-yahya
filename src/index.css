@@ -203,8 +203,9 @@
     z-index: 100;
     background: repeating-linear-gradient(
       0deg, transparent, transparent 2px,
-      hsl(0 0% 0% / 0.03) 2px, hsl(0 0% 0% / 0.03) 4px
+      hsl(0 0% 0% / 0.05) 2px, hsl(0 0% 0% / 0.05) 4px
     );
+    opacity: 0.5;
   }
   .light .scanline-overlay {
     background: repeating-linear-gradient(
@@ -213,8 +214,59 @@
     );
   }
 
+  /* Advanced CRT Effects */
+  .crt-flicker {
+    animation: crt-flicker 0.15s infinite;
+  }
+  @keyframes crt-flicker {
+    0% { opacity: 0.98; }
+    50% { opacity: 1; }
+    100% { opacity: 0.99; }
+  }
+
+  .crt-vignette {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.3) 100%);
+  }
+  .light .crt-vignette {
+    background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.05) 100%);
+  }
+
+  .moving-scanline {
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(var(--primary), 0.03), transparent);
+    z-index: 95;
+    animation: scanline-move 8s linear infinite;
+  }
+  @keyframes scanline-move {
+    from { transform: translateY(-100vh); }
+    to { transform: translateY(100vh); }
+  }
+
   /* Profile image terminal style */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+
   .profile-terminal {
+
     position: relative;
     overflow: hidden;
   }
