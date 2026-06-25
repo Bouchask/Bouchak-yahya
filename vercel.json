@@ -9,7 +9,6 @@
       }
     }
   ],
-  "installCommand": "npm install vite@7.3.6 --save-dev --save-exact && npm install --legacy-peer-deps",
   "rewrites": [
     {
       "source": "(.*)",
