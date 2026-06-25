@@ -35,6 +35,7 @@ interface LogLine {
 export default function TrainingBackground() {
   const [logs, setLogs] = useState<LogLine[]>([]);
   const counterRef = useRef(0);
+  const intervalRef = useRef<NodeJS.Timeout>();
 
   const addLog = useCallback(() => {
     const template = LOG_TEMPLATES[Math.floor(Math.random() * LOG_TEMPLATES.length)];
@@ -51,8 +52,10 @@ export default function TrainingBackground() {
     for (let i = 0; i < 20; i++) {
       setTimeout(() => addLog(), i * 100);
     }
-    const interval = setInterval(addLog, 1800 + Math.random() * 1200);
-    return () => clearInterval(interval);
+    intervalRef.current = setInterval(addLog, 2000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, [addLog]);
 
   return (

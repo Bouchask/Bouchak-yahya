@@ -17,6 +17,9 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/yahyabouchak",
   linkedinUser: "yahyabouchak",
   cvFile: "/Yahya_Bouchak_CV.pdf",
+  cvLaTeX: "/Yahya_Bouchak_CV_Simple.tex",
+  portfolioUrl: "https://yahya.ink",
+  livePlatformUrl: "https://si-ia.site",
 };
 
 // ── Skill categories ─────────────────────────────────────────
@@ -36,72 +39,58 @@ export interface Project {
   description: LocalizedString;
   technologies: string[];
   githubUrl: string;
+  liveUrl?: string;
   linkedinUrl?: string;
+  badge?: string;
 }
 
 export const projects: Project[] = [
   {
+    id: "siia-platform",
+    title: "SIIA Academic Platform",
+    description: {
+      en: "Production academic management platform serving real students at FP Khouribga. Complete full-stack solution with RBAC security.",
+      fr: "Plateforme de gestion académique en production servant de vrais étudiants à FP Khouribga. Solution full-stack complète avec sécurité RBAC.",
+    },
+    technologies: ["React 19", "Flask", "PostgreSQL", "JWT RBAC", "Vercel"],
+    githubUrl: "https://github.com/Bouchask/siia",
+    liveUrl: "https://www.si-ia.site",
+    badge: "LIVE",
+  },
+  {
     id: "siem-ai",
     title: "SIEM AI Dashboard",
     description: {
-      en: "Real-time security alert classification using local LLMs. Ingests Wazuh alerts via Apache Kafka.",
-      fr: "Classification d'alertes de sécurité en temps réel avec des LLMs locaux. Ingestion d'alertes Wazuh via Apache Kafka.",
+      en: "Real-time security alert classification using local LLMs (Ollama). Ingests Wazuh alerts via Apache Kafka with FastAPI backend and React dashboard.",
+      fr: "Classification d'alertes de sécurité en temps réel avec des LLMs locaux (Ollama). Ingestion d'alertes Wazuh via Apache Kafka avec backend FastAPI et tableau de bord React.",
     },
-    technologies: ["FastAPI", "React", "Kafka", "Ollama", "Wazuh"],
+    technologies: ["FastAPI", "React", "Kafka", "Ollama LLM", "Wazuh", "SQLite"],
     githubUrl: "https://github.com/Bouchask/siam-stage",
     linkedinUrl: "https://www.linkedin.com/posts/yahyabouchak_cybersecurity-ai-siem-share-7389277413135839232-d68H",
-  },
-  {
-    id: "attendance-portal",
-    title: "AI Attendance Portal",
-    description: {
-      en: "Automated face recognition attendance using YOLOv8 + ArcFace with FAISS vector search.",
-      fr: "Système de présence par reconnaissance faciale automatisée utilisant YOLOv8 + ArcFace avec recherche vectorielle FAISS.",
-    },
-    technologies: ["YOLOv8", "ArcFace", "FAISS", "Flask"],
-    githubUrl: "https://github.com/Bouchask/Portail_IA",
+    badge: "AI/ML",
   },
   {
     id: "rome-ai",
     title: "RomeAI — Campus Room Manager",
     description: {
-      en: "University room & session management with React Native mobile app and Flask REST API.",
-      fr: "Gestion de salles et sessions universitaires avec application mobile React Native et API REST Flask.",
+      en: "University room & session management with React Native mobile app and Flask REST API. Built for real campus use.",
+      fr: "Gestion de salles et sessions universitaires avec application mobile React Native et API REST Flask. Construit pour un usage campus réel.",
     },
     technologies: ["React Native", "Flask", "SQLAlchemy"],
     githubUrl: "https://github.com/Bouchask/romeAI",
     linkedinUrl: "https://www.linkedin.com/posts/yahyabouchak_reactnative-mobiledevelopment-flask-activity-7438396977131704321-ffOY",
+    badge: "MOBILE",
   },
   {
-    id: "nasdaq-prediction",
-    title: "NASDAQ 100 Prediction",
+    id: "ai-attendance",
+    title: "AI Attendance Portal",
     description: {
-      en: "Time-series forecasting for NASDAQ 100 price movements using deep learning.",
-      fr: "Prédiction de séries temporelles des mouvements NASDAQ 100 par deep learning.",
+      en: "Automated face recognition attendance system using YOLOv8 for detection, ArcFace for recognition, and FAISS for sub-millisecond similarity search.",
+      fr: "Système de présence par reconnaissance faciale automatisée utilisant YOLOv8 pour la détection, ArcFace pour la reconnaissance, et FAISS pour la recherche de similarité en moins d'une milliseconde.",
     },
-    technologies: ["TensorFlow", "Streamlit", "yfinance"],
-    githubUrl: "https://github.com/Bouchask/prediction_nasdaq",
-  },
-  {
-    id: "face-clustering",
-    title: "Unsupervised Face Clustering",
-    description: {
-      en: "Computer vision pipeline: InsightFace extraction + HDBSCAN density-based clustering.",
-      fr: "Pipeline de vision par ordinateur : extraction InsightFace + clustering HDBSCAN.",
-    },
-    technologies: ["InsightFace", "HDBSCAN", "OpenCV"],
-    githubUrl: "https://github.com/Bouchask/D-tection-et-de-Clustering-des-Visages",
-  },
-  {
-    id: "sentiment-analysis",
-    title: "NLP Sentiment Analysis",
-    description: {
-      en: "Sentiment detection on a fine-tuned DistilRoBERTa model from HuggingFace.",
-      fr: "Détection de sentiments sur un modèle DistilRoBERTa affiné de HuggingFace.",
-    },
-    technologies: ["DistilRoBERTa", "HuggingFace", "Streamlit"],
-    githubUrl: "https://github.com/Bouchask/nlp_sentiment_project",
-    linkedinUrl: "https://www.linkedin.com/posts/yahyabouchak_datascience-nlp-ia-activity-7324906617034993664-0B2f",
+    technologies: ["Python", "YOLOv8", "ArcFace", "FAISS", "Flask", "OpenCV"],
+    githubUrl: "https://github.com/Bouchask/Portail_IA",
+    badge: "CV",
   },
 ];
 
