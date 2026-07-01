@@ -1,3 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yahya.ink/sitemap.xml
+
+# Host
+Host: yahya.ink
+
+# Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -7,8 +17,33 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: FacebookExternalHit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow crawling of non-public directories
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /src/
+
+# Allow all static assets
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.woff2$
+Allow: /*.woff$
+Allow: /*.ttf$
+

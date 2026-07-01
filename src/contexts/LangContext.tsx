@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useCallback } from "react";
 import { translations } from "@/data/portfolio";
 
 type Lang = "en" | "fr";
@@ -15,6 +15,13 @@ const LangContext = createContext<LangContextType>({
   t: (key: string) => key,
 });
 
+// Track analytics events
+const trackLanguageChange = (language: Lang) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "language_change", { language });
+  }
+};
+
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(() => {
     if (typeof window !== "undefined") {
@@ -23,13 +30,14 @@ export function LangProvider({ children }: { children: ReactNode }) {
     return "en";
   });
 
-  const toggleLang = () => {
+  const toggleLang = useCallback(() => {
     setLang((l) => {
       const next = l === "en" ? "fr" : "en";
       localStorage.setItem("yb-lang", next);
+      trackLanguageChange(next);
       return next;
     });
-  };
+  }, []);
 
   const t = (key: string) => translations[key]?.[lang] || key;
 

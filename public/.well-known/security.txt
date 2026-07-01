@@ -1,0 +1,24 @@
+Contact: mailto:mr.bouchakyahya@gmail.com
+Expires: 2025-12-31T23:59:59Z
+Preferred-Languages: en, fr
+Canonical: https://yahya.ink/.well-known/security.txt
+
+# Security Policy
+If you discover a security vulnerability in this portfolio website, please report it responsibly.
+
+# Scope
+- https://yahya.ink
+- All subdomains and related services
+
+# Out of Scope
+- Third-party services integrated with this website
+- Denial of service attacks
+- Social engineering attacks
+
+# Reward
+This is a personal portfolio. While we appreciate all responsible disclosures, 
+we do not currently offer a bug bounty program.
+
+# Response Time
+We will acknowledge your report within 48 hours and provide updates on our 
+progress towards a fix within 7 days.

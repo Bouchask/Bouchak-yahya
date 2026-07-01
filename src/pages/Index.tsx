@@ -12,7 +12,7 @@ const Index = () => {
   const { t } = useLang();
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen" id="main-content" role="main">
       <Navbar />
       <TrainingBackground />
       <HeroSection />

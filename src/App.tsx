@@ -35,6 +35,14 @@ const App = () => {
                   <div className="crt-vignette" />
                   <div className="moving-scanline" />
                   <BrowserRouter>
+                    {/* Skip to main content for accessibility */}
+                    <a 
+                      href="#main-content" 
+                      className="fixed -top-40 left-0 bg-primary text-primary-foreground px-4 py-2 rounded-br z-50 focus:top-0 focus:transition-all focus:duration-300"
+                      aria-label="Skip to main content"
+                    >
+                      Skip to Content
+                    </a>
                     <Routes>
                       <Route path="/" element={<Index />} />
                       <Route path="*" element={<NotFound />} />
